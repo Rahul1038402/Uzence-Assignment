@@ -93,14 +93,14 @@ npm run build-storybook
 │   │   │   ├── InputField.types.ts
 │   │   │   └── index.ts
 │   │   ├── Contact.tsx
-│   │   ├── Datatable_component.tsx   # (Consider renaming → `DataTableDemo.tsx`)
+│   │   ├── Datatable_component.tsx 
 │   │   ├── Features_Overview_component.tsx
-│   │   ├── InputField_component.tsx  # (Consider renaming → `InputFieldDemo.tsx`)
+│   │   ├── InputField_component.tsx 
 │   │   ├── Navbar.tsx
 │   │   └── ThemeToggle.tsx
 │   │
 │   ├── 📂 hooks/               # Custom React hooks
-│   ├── 📂 stories/             # Global Storybook stories (if not colocated)
+│   ├── 📂 stories/             # Global Storybook stories
 │   ├── 📂 types/               # Global shared TypeScript types
 │   ├── 📂 utils/               # Helper functions
 │   │
