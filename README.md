@@ -75,26 +75,51 @@ npm run build-storybook
 ## 🗂️ Project Structure (example)
 
 ```
-.
-├── src/
-│   ├── components/
-│   │   ├── InputField/           # InputField component
-│   │   ├── Datatable/            # DataTable component
-│   │   ├── Navbar/               # Navbar (fixed header)
-│   │   ├── Contact/              # Contact section
-│   │   ├── InputField_component.tsx
-│   │   ├── Datatable_component.tsx
-│   │   └── Features_Overview_component.tsx
+📦 project-root
+├── 📂 .storybook/               # Storybook config files
+├── 📂 public/                   # Static assets (favicons, images, etc.)
+├── 📂 src/
+│   ├── 📂 components/
+│   │   ├── 📂 DataTable/
+│   │   │   ├── DataTable.stories.tsx
+│   │   │   ├── DataTable.test.tsx
+│   │   │   ├── DataTable.tsx
+│   │   │   ├── DataTable.types.ts
+│   │   │   └── index.ts
+│   │   ├── 📂 InputField/
+│   │   │   ├── InputField.stories.tsx
+│   │   │   ├── InputField.test.tsx
+│   │   │   ├── InputField.tsx
+│   │   │   ├── InputField.types.ts
+│   │   │   └── index.ts
+│   │   ├── Contact.tsx
+│   │   ├── Datatable_component.tsx   # (Consider renaming → `DataTableDemo.tsx`)
+│   │   ├── Features_Overview_component.tsx
+│   │   ├── InputField_component.tsx  # (Consider renaming → `InputFieldDemo.tsx`)
+│   │   ├── Navbar.tsx
+│   │   └── ThemeToggle.tsx
+│   │
+│   ├── 📂 hooks/               # Custom React hooks
+│   ├── 📂 stories/             # Global Storybook stories (if not colocated)
+│   ├── 📂 types/               # Global shared TypeScript types
+│   ├── 📂 utils/               # Helper functions
+│   │
+│   ├── App.css
 │   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── public/
-├── .storybook/                   # Storybook config
+│   ├── index.css
+│   └── main.tsx                # Vite entry point
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
 ├── package.json
-├── tailwind.config.ts
 ├── postcss.config.js
+├── tailwind.config.ts
+├── tsconfig.app.json
 ├── tsconfig.json
+├── tsconfig.node.json
 └── vite.config.ts
+
 ```
 
 ---
