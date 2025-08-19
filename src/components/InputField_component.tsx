@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import InputField from './InputField/InputField';
 
-// Main Component
 export const InputField_component = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [email, setEmail] = useState('');

@@ -68,7 +68,7 @@ describe('DataTable', () => {
       />
     );
     
-    const firstCheckbox = screen.getAllByRole('checkbox')[1]; // Skip select all
+    const firstCheckbox = screen.getAllByRole('checkbox')[1];
     await user.click(firstCheckbox);
     
     expect(onRowSelect).toHaveBeenCalledWith([mockData[0]]);

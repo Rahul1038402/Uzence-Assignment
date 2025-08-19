@@ -41,7 +41,6 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     const hasError = invalid || !!errorMessage;
     const hasValue = value && value.length > 0;
 
-    // Size variants
     const sizeClasses = {
       sm: {
         input: 'h-8 px-2 text-sm',
@@ -63,7 +62,6 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       }
     };
 
-    // Variant styles
     const getVariantClasses = () => {
       const baseClasses = 'w-full rounded-md border transition-all duration-200 focus:outline-none focus:ring-2';
       

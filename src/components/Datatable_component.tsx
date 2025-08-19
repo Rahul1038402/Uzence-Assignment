@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import DataTable from '../components/DataTable';
 
-// Sample data for demo
 const sampleUsers = [
     {
         id: 1,
@@ -88,10 +87,10 @@ const columns = [
         sortable: true,
         render: (value) => (
             <span className={`px-2 py-1 text-xs font-medium rounded-full ${value === 'Admin'
-                    ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400'
-                    : value === 'Manager'
-                        ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400'
-                        : 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-400'
+                ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400'
+                : value === 'Manager'
+                    ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400'
+                    : 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-400'
                 }`}>
                 {value}
             </span>
@@ -105,8 +104,8 @@ const columns = [
         align: 'center' as const,
         render: (value) => (
             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${value === 'active'
-                    ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
-                    : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
+                ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
+                : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
                 }`}>
                 <div className={`w-1.5 h-1.5 rounded-full mr-1.5 ${value === 'active' ? 'bg-green-400' : 'bg-red-400'
                     }`} />
@@ -130,9 +129,8 @@ export const Datatable_component = () => {
     const [singleSelectedUser, setSingleSelectedUser] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [showEmpty, setShowEmpty] = useState(false);
-    const [selectionMode, setSelectionMode] = useState('multiple'); // 'single' or 'multiple'
+    const [selectionMode, setSelectionMode] = useState('multiple');
 
-    // Filter users based on search
     const filteredUsers = showEmpty ? [] : sampleUsers.filter(user =>
         user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         user.email.toLowerCase().includes(searchQuery.toLowerCase()) ||

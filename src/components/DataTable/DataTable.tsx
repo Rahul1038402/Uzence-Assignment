@@ -61,7 +61,7 @@ function DataTable<T extends Record<string, any>>({
 
     setSortConfig(prev => {
       if (prev.key === column.dataIndex) {
-        // Cycle through: null -> asc -> desc -> null
+        // Sorting: null | ascending | decending | null
         const nextOrder: SortOrder = 
           prev.order === null ? 'asc' : 
           prev.order === 'asc' ? 'desc' : null;
