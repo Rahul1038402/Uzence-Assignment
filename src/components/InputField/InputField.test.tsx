@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import InputField from './InputField';
+import '../../index.css';
 
 describe('InputField', () => {
   it('renders with label and placeholder', () => {
